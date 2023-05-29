@@ -1,0 +1,34 @@
+﻿<Window x:Class="SOY.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:scm="clr-namespace:System.ComponentModel;assembly=WindowsBase"
+        xmlns:local="clr-namespace:SOY"
+        mc:Ignorable="d"
+        Title="SOY" Height="600" Width="1000" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="753*"/>
+            <ColumnDefinition Width="247*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="SOYlist" Margin="263,84,0,61" BorderBrush="Black" AutoGenerateColumns="False" Grid.ColumnSpan="2" SelectionChanged="SOYlist_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="Column_1" Binding="{Binding Path=FIO}" IsReadOnly="False" Header="ФИО" Width="*" CanUserSort="True"/>
+                <DataGridTextColumn x:Name="Column_2" Binding="{Binding Path=Goda}" IsReadOnly="False" Header="Полных лет" Width="*" CanUserSort="True"/>
+                <DataGridTextColumn x:Name="Column_4" Binding="{Binding Path=Speciality}" IsReadOnly="False" Header="Специальность" Width="*" CanUserSort="True"/>
+                <DataGridTextColumn x:Name="Column_5" Binding="{Binding Path=Phone}" IsReadOnly="False" Header="Номер телефона" Width="*" CanUserSort="True"/>
+                <DataGridTextColumn x:Name="Column_3" Binding="{Binding Path=Oklad}" IsReadOnly="False" Header="Оклад" Width="0.5*" CanUserSort="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <ListBox d:ItemsSource="{d:SampleData ItemCount=1}" Margin="6,106,495,61" x:Name="ListBoxLists" SelectionChanged="ListBoxLists_SelectionChanged"/>
+        <Button Content="Создать отдел" HorizontalAlignment="Left" Margin="10,27,0,0" VerticalAlignment="Top" Height="30" Width="117" Click="Button_Click"/>
+        <TextBox x:Name="TextBoxNamelist" HorizontalAlignment="Left" Margin="7,78,0,0" TextWrapping="Wrap" Text=""  VerticalAlignment="Top" Width="251" Height="28"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Height="24"><Run Text="Введите имя "/><Run Language="ru-ru" Text="отдела"/><Run Text=":"/></TextBlock>
+        <Button Height="29" Margin="132,27,509,0" x:Name="DeleteButton" VerticalAlignment="Top" Click="DeleteButton_Click" Content="Удалить отдел"/>
+        <TextBox HorizontalAlignment="Left" Margin="263,53,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" Height="26" TextChanged="TextBox_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="263,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="23" Width="118"><Run Text="Поиск по "/><Run Language="ru-ru" Text="ФИО"/><Run Text=":"/></TextBlock>
+
+
+    </Grid>
+</Window>
