@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "SSCSbNtD2rbF8DUNtcBEJ53okaqPzqhqNZg+I2alY8oFlMf/lHZbb6gu66zDok/IIFd3VxTYQTvKPhlrPx1tBQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ILIY\\source\\repos\\WpfApp5\\WpfApp5\\WpfApp5.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ILIY\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
